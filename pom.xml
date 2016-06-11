@@ -6,15 +6,11 @@
           <artifactId>spring-boot-starter-parent</artifactId>
           <version>1.2.5.RELEASE</version>
      </parent>
-     <groupId>com.sca.platform</groupId>
+     <groupId>com.satya</groupId>
      <artifactId>springfeatures-plugin</artifactId>
      <version>1.0.0-SNAPSHOT</version>
      <packaging>war</packaging>
      <name>springfeatures Plugin</name>
-     <organization>
-          <name>SCA Technologies</name>
-          <url>http://www.scatech.com</url>
-     </organization>
      <properties>
           <publishRepositoryId>${project.distributionManagement.snapshotRepository.id}</publishRepositoryId>
           <publishRepositoryUrl>${project.distributionManagement.snapshotRepository.url}</publishRepositoryUrl>
@@ -32,188 +28,39 @@
                <url>http://repo1.maven.org/maven2/</url>
                <layout>default</layout>
           </repository>
-          <repository>
-               <id>releases</id>
-               <name>releases</name>
-               <url>http://nexus:8081/content/repositories/releases</url>
-          </repository>
-          <repository>
-               <id>snapshots</id>
-               <name>snapshots</name>
-               <url>http://nexus:8081/content/repositories/snapshots</url>
-          </repository>
-     </repositories>
+      </repositories>
 
      <dependencies>
 
-          <dependency>
-               <groupId>com.sca.platform</groupId>
-               <artifactId>plugin</artifactId>
-               <version>1.0.1-SNAPSHOT</version>
-          </dependency>
-          <dependency>
-               <groupId>com.sca.platform</groupId>
-               <artifactId>broker</artifactId>
-               <version>1.0.1-SNAPSHOT</version>
-          </dependency>
+         
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-web</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-               </exclusions>
-          </dependency>
+           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-redis</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-               </exclusions>
-          </dependency>
+           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-tomcat</artifactId>
                <scope>provided</scope>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-               </exclusions>
-          </dependency>
+           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-jersey</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-               </exclusions>
-          </dependency>
+           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-actuator</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-test</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.springframework.boot</groupId>
                <artifactId>spring-boot-starter-jdbc</artifactId>
-               <exclusions>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson.core</groupId>
-                         <artifactId>jackson-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                         <groupId>com.fasterxml.jackson</groupId>
-                         <artifactId>jackson-parent</artifactId>
-                    </exclusion>
-               </exclusions>
           </dependency>
           <dependency>
                <groupId>org.glassfish.jersey.core</groupId>
@@ -380,16 +227,4 @@
                </plugin>
           </plugins>
      </build>
-     <distributionManagement>
-          <repository>
-               <id>releases</id>
-               <name>releases</name>
-               <url>http://nexus:8081/content/repositories/releases</url>
-          </repository>
-          <snapshotRepository>
-               <id>snapshots</id>
-               <name>snapshots</name>
-               <url>http://nexus:8081/content/repositories/snapshots</url>
-          </snapshotRepository>
-     </distributionManagement>
 </project>

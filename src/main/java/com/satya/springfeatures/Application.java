@@ -1,10 +1,4 @@
-/*
- * Application.java
- * 
- * Copyright 2015 SCA Technologies corp. All rights reserved. 
- * PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
-
+ 
 package com.satya.springfeatures;
 
 import org.springframework.boot.SpringApplication;
